@@ -1,7 +1,7 @@
 from conans import ConanFile, CMake
 
 class Tileset(ConanFile):
-    name = "ui-glfw-tileset"
+    name = "ui-tileset-glfw"
     version = "0.0"
 
     settings = "os", "arch", "compiler", "build_type"
