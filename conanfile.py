@@ -1,7 +1,7 @@
 from conans import ConanFile, CMake
 
 class Tileset(ConanFile):
-    name = "glfw_tileset"
+    name = "ui-glfw-tileset"
     version = "0.0"
 
     settings = "os", "arch", "compiler", "build_type"
@@ -16,8 +16,8 @@ class Tileset(ConanFile):
 
     def requirements(self):
         self.requires("glfw/3.2.1@bincrafters/stable")
-        self.requires("tileset/0.0@sword/sorcery")
-        self.requires("stb/20180214@conan/stable")
+        self.requires("stb/20180214@conan/stable", private=True)
+        self.requires("ui-tileset/0.0@sword/sorcery")
 
     def build(self):
         cmake = CMake(self)
@@ -26,4 +26,4 @@ class Tileset(ConanFile):
         cmake.install()
 
     def package_info(self):
-        self.cpp_info.libs = ["glfw_tileset",]
+        self.cpp_info.libs = ["tileset_glfw",]

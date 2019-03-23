@@ -7,25 +7,26 @@ conan_basic_setup(TARGETS)
 set(SOURCES src/textures.cpp)
 # set(HEADERS include/textures.h)
 
-add_library(glfw_tileset ${SOURCES})
-set_target_properties(glfw_tileset PROPERTIES CXX_STANDARD 17)
-target_link_libraries(glfw_tileset PUBLIC CONAN_PKG::glfw CONAN_PKG::tileset CONAN_PKG::stb)
+add_library(tileset_glfw ${SOURCES})
+set_target_properties(tileset_glfw PROPERTIES CXX_STANDARD 17)
+target_link_libraries(tileset_glfw PUBLIC CONAN_PKG::glfw CONAN_PKG::ui-tileset)
+target_link_libraries(tileset_glfw PRIVATE CONAN_PKG::stb)
 
 target_include_directories(
-    glfw_tileset PUBLIC
+    tileset_glfw PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/>
     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
 
 install(
-    TARGETS glfw_tileset
-    EXPORT glfw_tileset-config
+    TARGETS tileset_glfw
+    EXPORT tileset_glfw-config
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
 
 install(
-    EXPORT glfw_tileset-config
-    NAMESPACE glfw_tileset::
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/glfw_tileset)
+    EXPORT tileset_glfw-config
+    NAMESPACE tileset_glfw::
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/tileset_glfw)
 
 install(
     DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/include/
-    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/glfw_tileset)
+    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tileset_glfw)
