@@ -25,8 +25,8 @@ install(
 install(
     EXPORT tileset_glfw-config
     NAMESPACE tileset_glfw::
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/tileset_glfw)
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake)
 
 install(
     DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/include/
-    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tileset_glfw)
+    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
