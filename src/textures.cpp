@@ -42,6 +42,6 @@ namespace opengl {
             images[std::make_pair(tileset, id)] = std::make_tuple(width, height, ret);
             return ret;
         }
-        throw std::runtime_error("Tileset (or tile not found)");
+        throw std::runtime_error("Tileset (or tile) not found");
     }
 }

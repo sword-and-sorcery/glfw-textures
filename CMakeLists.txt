@@ -16,17 +16,3 @@ target_include_directories(
     tileset_glfw PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/>
     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
-
-install(
-    TARGETS tileset_glfw
-    EXPORT tileset_glfw-config
-    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
-
-install(
-    EXPORT tileset_glfw-config
-    NAMESPACE tileset_glfw::
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake)
-
-install(
-    DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/include/
-    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
