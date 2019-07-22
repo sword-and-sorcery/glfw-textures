@@ -1,4 +1,4 @@
-# glfw-textures
+# ui-tileset-glfw
 
 Texture storage/loader using GLFW (OpenGL). Adds a tileset
 and retrieve a textures one by one.
