@@ -5,7 +5,7 @@ include(${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup(TARGETS)
 
 set(SOURCES src/textures.cpp)
-file(GLOB HEADERS include/tileset/*)
+file(GLOB HEADERS include/tileset_glfw/*)
 
 add_library(tileset_glfw ${SOURCES} ${HEADERS})
 set_target_properties(tileset_glfw PROPERTIES CXX_STANDARD 17)
