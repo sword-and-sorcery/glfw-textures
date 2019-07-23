@@ -1,7 +1,7 @@
 # ui-tileset-glfw
 
 Texture storage/loader using GLFW (OpenGL). Adds a tileset
-and retrieve a textures one by one.
+and retrieve textures one by one.
 
 ```
 conan create . sword/sorcery
