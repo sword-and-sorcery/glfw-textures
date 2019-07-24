@@ -1,5 +1,7 @@
 # ui-tileset-glfw
 
+> ⚠️ **Full docs**: https://sword-and-sorcery.github.io/sword-and-sorcery/
+
 Texture storage/loader using GLFW (OpenGL). Adds a tileset
 and retrieve textures one by one.
 
